@@ -26,5 +26,5 @@ jobs:
           git clone https://github.com/Blax1s/CandidateChallenge.git
           cd CandidateChallenge
           npm install
-          sudo node index.js
+          pm2 start index.js
         EOF
