@@ -4,7 +4,7 @@
 - The workflow retrieves the SSH key from Github secrets and uses it to connect to the VM.
 - After the connection is established, it clones the github repository into the appropriate directory.
 - The node server is then started as background process on PORT 80 using nohup.
-- [Deployement Link](https://20.2.74.69/sayHello)
+- [Deployement Link](http://20.2.74.69/sayHello)
 
 ## Challenges Faced
 - Had to learn how to use/setup Github Secrets for the SSH key.
