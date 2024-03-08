@@ -24,6 +24,7 @@ jobs:
           mkdir Abhay
           cd Abhay
           git clone https://github.com/Blax1s/CandidateChallenge.git
+          cd CandidateChallenge
           npm install
           node index.js
         EOF
