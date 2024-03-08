@@ -23,7 +23,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ubuntu@20.2.74.69 << 'EOF'
           mkdir Abhay
           cd Abhay
-          git pull
+          git clone https://github.com/Blax1s/CandidateChallenge.git
           npm install
           node index.js
         EOF
