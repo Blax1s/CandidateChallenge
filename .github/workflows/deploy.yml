@@ -44,7 +44,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_HOST }} << 'EOF'
           rm -rf ~/Abhay
           sudo pm2 delete index
-          unzip -o deploy_bundle.zip -d ~/Abhay
+          unzip -qq -o deploy_bundle.zip -d ~/Abhay
           rm deploy_bundle.zip
           cd ~/Abhay
           npm install
