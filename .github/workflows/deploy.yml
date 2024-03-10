@@ -42,6 +42,7 @@ jobs:
     - name: Deploy to VM
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_HOST }} << 'EOF'
+          rm -rf ~/Abhay
           unzip -o deploy_bundle.zip -d ~/Abhay
           rm deploy_bundle.zip
           cd ~/Abhay
