@@ -16,7 +16,6 @@ jobs:
       
     - name: Install npm dependencies
       run:  npm install
-      working-directory: ./CandidateChallenge
 
     - name: Archive Repository
       uses: montudor/action-zip@v1.0.0
