@@ -16,11 +16,14 @@ jobs:
       
     - name: Install npm dependencies
       run:  npm install
+    
+    - name: Verifying Working Directory
+      run:  pwd
 
     - name: Archive Repository
       uses: montudor/action-zip@v1.0.0
       with:
-        args: -r deploy_bundle.zip
+        args: zip -qq -r deploy_bundle.zip *
 
     - name: Set up SSH key
       uses: webfactory/ssh-agent@v0.5.3
