@@ -21,9 +21,7 @@ jobs:
       run:  pwd && ls
 
     - name: Archive Repository
-      uses: montudor/action-zip@v1.0.0
-      with:
-        args: zip -qq -r deploy_bundle.zip . -i *
+      run: zip -qq -r deploy_bundle.zip . -i *
 
     - name: Set up SSH key
       uses: webfactory/ssh-agent@v0.5.3
