@@ -19,7 +19,7 @@ jobs:
       working-directory: ./CandidateChallenge
 
     - name: Archive Repository
-      uses: montudor/action-zip@v0.3.0
+      uses: montudor/action-zip@v1.0.0
       with:
         args: -r deploy_bundle.zip
 
