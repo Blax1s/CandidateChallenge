@@ -18,9 +18,7 @@ jobs:
       run:  npm install
     
     - name: Verifying Working Directory
-      run:  |
-        pwd
-        ls
+      run:  pwd && ls
 
     - name: Archive Repository
       uses: montudor/action-zip@v1.0.0
@@ -45,7 +43,8 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USERNAME }}@${{ secrets.VM_HOST }} << 'EOF'
           unzip -o deploy_bundle.zip -d ~/Abhay
-          cd ~/Abhay/CandidateChallenge
+          rm deploy_bundle.zip
+          cd ~/Abhay
           npm install
           sudo pm2 start index.js
         EOF
